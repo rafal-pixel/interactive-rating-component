@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+}
+
+:root {
+    /* colors */
+    --primary-color: hsl(25, 97%, 53%);
+    --white-color: hsl(0, 0%, 100%);
+    --grey-color: hsl(217, 12%, 63%);
+    --active-rating-color: hsl(216, 12%, 54%);
+    --element-rating-color: hsl(213, 19%, 18%);
+    --background-rating-color: hsl(215, 22%, 15%);
+    --background-color: hsl(216, 12%, 8%);
+    /* topography */
+    --font-size: 15px;
+    --font-regular: 400;
+    --font-bold: 700;
+    --line-height: 24px;
+    --font-family: 'Overpass', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--white-color);
+    font-size: var(--font-size);
+    font-weight: var(--font-regular);
+    line-height: var(--line-height);
+}
+
+button {
+    outline: 0;
+    border: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading {
+    font-size: 27px;
+    line-height: 27px;
+}
+
+.lead {
+    color: var(--grey-color);
+}
+
+.btn {
+    width: 100%;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px;
+    padding-top: 3px;
+
+    font-size: var(--font-size);
+    font-weight: var(--font-bold);
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn--primary:hover {
+    color: var(--primary-color);
+    background-color: var(--white-color);
+}
+
+.interactive-rating {
+    max-width: 410px;
+    width: 100%;
+    padding: 32px 39px 20px 32px;
+    border-radius: 30px;
+    background-color: var(--background-rating-color);
+}
+
+.rating-form__star {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--element-rating-color);
+    margin-bottom: 35px;
+}
+
+.rating-form .heading{
+    margin-bottom: 15px;
+}
+
+.rating-form .lead{
+    margin-bottom: 28px;
+}
+
+.rating-form__choose {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 31px;
+}
+
+.rating-form__choose-item {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--element-rating-color);
+    padding-top: 1px;
+    color: var(--grey-color);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.rating-form__choose-item input {
+    position: absolute;
+    z-index: -10;
+}
+
+.rating-form__choose-item:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.rating-form__choose-item.active {
+    color: var(--white-color);
+    background-color: var(--active-rating-color);
+}
+
+.success-form {
+    text-align: center;
+    padding: 13px 0 28px;
+    display: none;
+}
+
+.success-form img {
+    margin-bottom: 25px;
+}
+
+.success-form__your-rating {
+    width: 195px;
+    height: 31px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--element-rating-color);
+    border-radius: 30px;
+    padding-top: 2px;
+    margin: 0 0 40px 5px;
+
+    color: var(--primary-color);
+}
+
+.success-form .heading {
+    margin-bottom: 13px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    :root {
+        --font-size: 14px;
+        --line-height: 23px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .interactive-rating {
+        max-width: 328px;
+        padding: 24px 21px 31px 25px;
+        border-radius: 15px;
+    }
+
+    .rating-form__star {
+        height: 40px; 
+        width: 40px;
+        margin-bottom: 22px;
+    }
+
+    .rating-form__star img{
+        width: 14px;
+    }
+
+    .rating-form .heading {
+        margin-bottom: 11px;
+    }
+
+    .rating-form__choose {
+        margin-bottom: 22px;
+    }
+
+    .rating-form__choose-item {
+        height: 40px; 
+        width: 40px;
+    }
+
+    .success-form {
+        padding: 13px 0 5px;
+    }
+
+    .success-form img{
+        width: 140px;
+        margin-bottom: 17px;
+    }
+
+    .success-form__your-rating {
+        width: 170px;
+        margin: 0 0 29px 0;
+    }
+}
