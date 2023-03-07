@@ -2,7 +2,7 @@
 
 Interactive rating component created with html, css, js.
 
-https://robotamozepoczekac.github.io/%20interactive-rating-component/
+https://robotamozepoczekac.github.io/interactive-rating-component/
 
 The project was modeled on the basis of only jpg images, only hints about the font and colors were added to the project.
 
